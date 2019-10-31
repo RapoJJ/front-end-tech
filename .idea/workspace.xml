@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="018a42f8-f9ae-4be8-b0ea-dcae9dcd261f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/FrontEndCourse/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEndCourse/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEndCourse/src/app/calculator/calculator.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEndCourse/src/app/calculator/calculator.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEndCourse/src/app/calculator/calculator.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEndCourse/src/app/calculator/calculator.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEndCourse/src/app/calculator/calculator.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEndCourse/src/app/calculator/calculator.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEndCourse/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEndCourse/src/styles.css" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Sxdl9KbKSGqsBbvPmG8zFgbPAi" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="018a42f8-f9ae-4be8-b0ea-dcae9dcd261f" name="Default Changelist" comment="" />
+      <created>1572509328811</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572509328811</updated>
+      <workItem from="1572509332406" duration="81000" />
+    </task>
+    <servers />
+  </component>
+</project>
