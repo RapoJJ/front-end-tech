@@ -1,0 +1,14 @@
+<mat-toolbar>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="toolbarTitle">Front-end Työkalut</span>
+  <mat-menu #menu="matMenu">
+    <button mat-icon-button (click)="onHomeClick()">
+      <mat-icon>home</mat-icon> Etusivu
+    </button>
+    <button mat-menu-item (click)="onLaskinClick()">Laskin</button>
+    <button mat-menu-item>Jotain tulevaa</button>
+  </mat-menu>
+</mat-toolbar>
+
