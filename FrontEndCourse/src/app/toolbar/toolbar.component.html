@@ -2,13 +2,13 @@
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
   </button>
-  <span class="toolbarTitle">Front-end Työkalut</span>
+  <span class="toolbarTitle">Front-end Course</span>
   <mat-menu #menu="matMenu">
-    <button mat-icon-button (click)="onHomeClick()">
-      <mat-icon>home</mat-icon> Etusivu
+    <button mat-icon-button (click)="onNavigateClick('home')">
+      <mat-icon>home</mat-icon> Front Page
     </button>
-    <button mat-menu-item (click)="onLaskinClick()">Laskin</button>
-    <button mat-menu-item>Jotain tulevaa</button>
+    <button mat-menu-item (click)="onNavigateClick('calculator')">Calculator</button>
+    <button mat-menu-item (click)="onNavigateClick('feedback')">Feedback</button>
   </mat-menu>
 </mat-toolbar>
 

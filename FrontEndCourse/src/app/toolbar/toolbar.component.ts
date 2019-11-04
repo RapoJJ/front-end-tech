@@ -13,11 +13,7 @@ export class ToolbarComponent implements OnInit {
   ngOnInit() {
   }
 
-  onLaskinClick() {
-    this.router.navigateByUrl('/calculator');
-  }
-
-  onHomeClick() {
-    this.router.navigateByUrl('/home');
+  onNavigateClick(urlToNavigate) {
+    this.router.navigateByUrl('/' + urlToNavigate);
   }
 }

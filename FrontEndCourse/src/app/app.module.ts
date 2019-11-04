@@ -14,13 +14,15 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { HomeComponent } from './home/home.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculatorComponent,
     ToolbarComponent,
-    HomeComponent
+    HomeComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
