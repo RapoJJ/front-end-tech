@@ -19,7 +19,7 @@ export class CalculatorComponent implements OnInit {
   }
 
   addNumbers(value) {
-    if (value == '=') {
+    if (value === '=') {
       try {
         // tslint:disable-next-line:no-eval
         this.result = eval(this.operation);
@@ -28,11 +28,11 @@ export class CalculatorComponent implements OnInit {
         console.error(error);
         this.operation = '';
       }
-    } else if (value == 'C') {
+    } else if (value === 'C') {
       this.operation = '';
-    } else if (value == '+' || value == '-' || value == '*' || value == '/') {
+    } else if (value === '+' || value === '-' || value === '*' || value === '/') {
       const lastChar = this.operation.substr(this.operation.length - 1);
-      if (lastChar == '+' || lastChar == '-' || lastChar == '*' || lastChar == '/') {
+      if (lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/') {
         (console.log('do nothing'));
       } else {
         this.operation += value;
