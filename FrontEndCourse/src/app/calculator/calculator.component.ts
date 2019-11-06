@@ -19,11 +19,15 @@ export class CalculatorComponent implements OnInit {
   }
 
   addNumbers(number) {
-    console.log(number);
-
     if (number == "=") {
-      this.result = eval(this.operation);
-      this.operation = this.result.toString();
+      try {
+        this.result = eval(this.operation);
+        this.operation = this.result.toString();
+      }
+      catch(error) {
+        console.error(error);
+        this.operation = "";
+      }
     } else if (number == "C") {
       this.operation = "";
     } else if (number == "+" || number == "-" || number == "*" || number == "/") {
@@ -36,7 +40,5 @@ export class CalculatorComponent implements OnInit {
     } else {
       this.operation += number;
     }
-
-    console.log(typeof this.operation);
   }
 }
