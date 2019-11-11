@@ -8,9 +8,11 @@ import {Person} from '../classes/person';
 })
 export class RegistrationFormComponent implements OnInit {
   person: Person;
+  confirmPassword: string;
 
   constructor() {
     this.person = new Person();
+    this.confirmPassword = '';
   }
 
   ngOnInit() {

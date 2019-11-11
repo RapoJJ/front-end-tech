@@ -1,52 +1,83 @@
 <mat-card>
-  <div class="formContainer">
-    <mat-form-field>
-      <label>
-        <input matInput [(ngModel)]="person.firstName"
-               type="text"
-               required
-               placeholder="First name">
-      </label>
-    </mat-form-field>
-    <mat-form-field>
-      <label>
-        <input matInput [(ngModel)]="person.lastName"
-               type="text"
-               required
-               placeholder="Last name">
-      </label>
-    </mat-form-field>
-    <mat-form-field>
-      <label>
-        <input matInput [(ngModel)]="person.email"
-               type="text"
-               required
-               placeholder="Email address">
-      </label>
-    </mat-form-field>
-    <mat-form-field>
-      <label>
-        <input matInput [(ngModel)]="person.username"
-               type="text"
-               required
-               placeholder="Street address">
-      </label>
-    </mat-form-field>
-    <mat-form-field>
-      <label>
-        <input matInput [(ngModel)]="person.password"
-               type="text"
-               required
-               placeholder="Postal Code">
-      </label>
-    </mat-form-field>
-    <mat-form-field>
-      <label>
-        <input matInput [(ngModel)]="person.password"
-               type="text"
-               required
-               placeholder="Postal Code">
-      </label>
-    </mat-form-field>
-  </div>
+  <form>
+    <div class="formContainer">
+      <mat-form-field>
+        <label>
+          <input matInput [(ngModel)]="person.firstName"
+                 #firstName="ngModel" name="firstName"
+                 class="form-control"
+                 type="text"
+                 required minlength="2"
+                 placeholder="First name" pattern="[a-öA-Ö ]*">
+        </label>
+        <mat-error *ngIf="firstName.invalid">First name is invalid</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <label>
+          <input matInput [(ngModel)]="person.lastName"
+                 #lastName="ngModel" name="lastName"
+                 class="form-control"
+                 type="text"
+                 required minlength="2"
+                 placeholder="Last name" pattern="[a-öA-Ö ]*">
+        </label>
+        <mat-error *ngIf="lastName.invalid">Last name is invalid</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <label>
+          <input matInput [(ngModel)]="person.personId"
+                 #personId="ngModel" name="personId"
+                 class="form-control"
+                 type="text"
+                 required
+                 placeholder="Person id"
+                 pattern="^(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])([5-9]\d+|\d\d-|[01]\dA)\d{3}[\dA-Z]$">
+        </label>
+        <mat-error *ngIf="personId.invalid">Person id is invalid</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <label>
+          <input matInput [(ngModel)]="person.email"
+                 #email="ngModel" name="email"
+                 class="form-control"
+                 type="email"
+                 required
+                 placeholder="Email address"
+                 pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+        </label>
+        <mat-error *ngIf="email.invalid">Email is invalid</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <label>
+          <input matInput [(ngModel)]="person.username"
+                 #username="ngModel" name="username"
+                 class="form-control"
+                 type="text"
+                 required minlength="6"
+                 placeholder="Username">
+        </label>
+        <mat-error *ngIf="username.invalid">Username is invalid</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <label>
+          <input matInput [(ngModel)]="person.password"
+                 class="form-control" name="pw1" #pw1="ngModel"
+                 type="password"
+                 required minlength="10"
+                 placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+        </label>
+        <mat-error *ngIf="pw1.invalid"> Password not secure enough</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <label>
+          <input matInput [(ngModel)]="confirmPassword"
+                 class="form-control" name="pw2" #pw2="ngModel"
+                 type="password"
+                 required minlength="10"
+                 placeholder="Password" pattern="{{pw1.value}}">
+        </label>
+        <mat-error *ngIf="pw2.invalid">Password doesn't match</mat-error>
+      </mat-form-field>
+    </div>
+  </form>
 </mat-card>
