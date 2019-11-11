@@ -6,7 +6,7 @@
       [max]=3
       [min]=0
       [step]=1
-      (change)="q.setFeedback($event.value)">
+      (input)="q.setFeedback($event.value)">
     </mat-slider>
     <mat-card-content>{{q.answerList[q.answer]}}</mat-card-content>
   </mat-card-content>

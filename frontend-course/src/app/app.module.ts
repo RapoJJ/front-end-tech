@@ -8,7 +8,7 @@ import {
   MatButtonModule,
   MatCardModule,
   MatGridListModule,
-  MatIconModule,
+  MatIconModule, MatInputModule,
   MatMenuModule,
   MatSliderModule,
   MatToolbarModule
@@ -18,6 +18,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { HomeComponent } from './home/home.component';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ToolbarComponent,
     CalculatorComponent,
     FeedbackComponent,
-    HomeComponent
+    HomeComponent,
+    RegistrationFormComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatGridListModule,
     FormsModule,
     MatCardModule,
-    MatSliderModule
+    MatSliderModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
