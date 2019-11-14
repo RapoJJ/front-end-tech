@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     CalculatorComponent,
     FeedbackComponent,
     HomeComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
