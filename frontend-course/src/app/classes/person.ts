@@ -5,6 +5,7 @@ export class Person {
   email: string;
   username: string;
   password: string;
+  acceptTerms: boolean;
 
   constructor(firstName?: string, lastName?: string, personId?: string, email?: string, username?: string, password?: string) {
     this.firstName = firstName;
@@ -13,6 +14,7 @@ export class Person {
     this.email = email;
     this.username = username;
     this.password = password;
+    this.acceptTerms = false;
   }
 
 }

@@ -1,5 +1,5 @@
 <mat-card>
-  <form>
+  <form #contactForm="ngForm">
     <div class="formContainer">
       <mat-form-field>
         <label>
@@ -78,6 +78,11 @@
         </label>
         <mat-error *ngIf="pw2.invalid">Password doesn't match</mat-error>
       </mat-form-field>
+      <mat-checkbox [(ngModel)]="person.acceptTerms"
+                    ngModel required
+                    name="terms"
+      >Accept terms and conditions</mat-checkbox>
     </div>
   </form>
+  <button mat-button [disabled]="!contactForm.form.valid">Submit</button>
 </mat-card>

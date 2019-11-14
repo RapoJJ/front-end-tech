@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import {
   MatButtonModule,
-  MatCardModule,
+  MatCardModule, MatCheckboxModule,
   MatGridListModule,
   MatIconModule, MatInputModule,
   MatMenuModule,
@@ -41,7 +41,8 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     FormsModule,
     MatCardModule,
     MatSliderModule,
-    MatInputModule
+    MatInputModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
