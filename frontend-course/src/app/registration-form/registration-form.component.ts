@@ -18,4 +18,8 @@ export class RegistrationFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit(form) {
+    console.log(form.value.firstName);
+  }
+
 }

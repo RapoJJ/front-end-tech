@@ -1,0 +1,7 @@
+.content {
+  display: inline-block;
+}
+.imageContainer {
+  float: left;
+  padding-right: 5px;
+}

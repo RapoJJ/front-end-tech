@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import {
   MatButtonModule,
-  MatCardModule, MatCheckboxModule,
+  MatCardModule, MatCheckboxModule, MatExpansionModule,
   MatGridListModule,
   MatIconModule, MatInputModule,
   MatMenuModule,
@@ -16,10 +16,13 @@ import {
 import { CalculatorComponent } from './calculator/calculator.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { HomeComponent } from './home/home.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FinnkinoComponent } from './finnkino/finnkino.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     FeedbackComponent,
     HomeComponent,
     RegistrationFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    PageNotFoundComponent,
+    FinnkinoComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,10 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     MatCardModule,
     MatSliderModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

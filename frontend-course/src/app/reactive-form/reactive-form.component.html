@@ -1,1 +1,59 @@
-<p>reactive-form works!</p>
+<mat-card class="form-container">
+  <form [formGroup]="personForm" (ngSubmit)="onSubmit(personForm)">
+    <mat-form-field>
+      <label>
+        <input matInput type="text" formControlName="firstName"
+               placeholder="First name" [formGroup]="personForm">
+      </label>
+      <mat-error *ngIf="firstName.invalid">First name is invalid</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <label>
+        <input matInput type="text" formControlName="lastName"
+               placeholder="Last name">
+      </label>
+    </mat-form-field>
+    <mat-form-field>
+      <label>
+        <input matInput formControlName="personId"
+               class="form-control"
+               type="text"
+               placeholder="Person id">
+      </label>
+    </mat-form-field>
+    <mat-form-field>
+      <label>
+        <input matInput type="text" formControlName="email"
+               placeholder="Email address">
+      </label>
+    </mat-form-field>
+    <mat-form-field>
+      <label>
+        <input matInput formControlName="username"
+               class="form-control"
+               type="text"
+               placeholder="Username">
+      </label>
+    </mat-form-field>
+    <mat-form-field>
+      <label>
+        <input matInput
+               class="form-control" name="pw1"
+               type="password"
+               required minlength="10"
+               placeholder="Password">
+      </label>
+    </mat-form-field>
+    <mat-form-field>
+      <label>
+        <input matInput
+               class="form-control" name="pw2"
+               type="password"
+               required minlength="10"
+               placeholder="Password">
+      </label>
+    </mat-form-field>
+    <mat-checkbox name="terms">Accept terms and conditions</mat-checkbox>
+
+  </form>
+</mat-card>

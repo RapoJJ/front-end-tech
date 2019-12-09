@@ -1,5 +1,5 @@
 <mat-card>
-  <form #contactForm="ngForm">
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
     <div class="formContainer">
       <mat-form-field>
         <label>
@@ -84,5 +84,5 @@
       >Accept terms and conditions</mat-checkbox>
     </div>
   </form>
-  <button mat-button [disabled]="!contactForm.form.valid">Submit</button>
+  <button mat-button [disabled]="!contactForm.form.valid" (click)="onSubmit(contactForm)">Submit</button>
 </mat-card>
