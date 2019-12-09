@@ -23,6 +23,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FinnkinoComponent } from './finnkino/finnkino.component';
 import {HttpClientModule} from '@angular/common/http';
+import { NewsFilterPipe } from './pipes/news-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {HttpClientModule} from '@angular/common/http';
     RegistrationFormComponent,
     ReactiveFormComponent,
     PageNotFoundComponent,
-    FinnkinoComponent
+    FinnkinoComponent,
+    NewsFilterPipe
   ],
   imports: [
     BrowserModule,

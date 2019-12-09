@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {FinnkinoNews} from '../classes/finnkino-news';
 import {MovieNewsService} from '../service/movie-news.service';
 import {Observable} from 'rxjs';
 
@@ -10,8 +9,11 @@ import {Observable} from 'rxjs';
 })
 export class FinnkinoComponent implements OnInit {
   newsData$: Observable<any>;
+  searchTerm: string;
 
-  constructor(private newsService: MovieNewsService) { }
+  constructor(private newsService: MovieNewsService) {
+    this.searchTerm = '';
+  }
 
   ngOnInit() {
     this.newsData$ = this.newsService.getData();

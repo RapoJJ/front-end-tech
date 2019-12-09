@@ -1,13 +1,17 @@
 <mat-card>
+  <mat-form-field>
+    <input type="text" matInput placeholder="Search News" [(ngModel)]="searchTerm">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
   <mat-card-title>Finnkino News</mat-card-title>
   <mat-accordion>
-    <mat-expansion-panel *ngFor="let news of newsData$ | async">
+    <mat-expansion-panel *ngFor="let news of newsData$ | async | newsFilter: searchTerm">
       <mat-expansion-panel-header>
         {{news.Title}}
       </mat-expansion-panel-header>
       <div class="content">
-      <div class="imageContainer"><img src="{{news.ImageURL}}"></div>
-      <div class="infoContainer">{{news.HTMLLead}}</div>
+        <div class="imageContainer"><img src="{{news.ImageURL}}"></div>
+        <div class="infoContainer">{{news.HTMLLead}}</div>
       </div>
     </mat-expansion-panel>
   </mat-accordion>
