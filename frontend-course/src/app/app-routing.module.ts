@@ -7,6 +7,9 @@ import {RegistrationFormComponent} from './registration-form/registration-form.c
 import {ReactiveFormComponent} from './reactive-form/reactive-form.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {FinnkinoComponent} from './finnkino/finnkino.component';
+import {AdminLoginComponent} from './admin-login/admin-login.component';
+import {AdminComponent} from './admin/admin.component';
+import {AuthGuard} from './shared/auth.guard';
 
 
 const routes: Routes = [
@@ -17,6 +20,8 @@ const routes: Routes = [
   {path: 'form', component: RegistrationFormComponent},
   {path: 'reactive', component: ReactiveFormComponent},
   {path: 'finnkino', component: FinnkinoComponent},
+  {path: 'adminLogin', component: AdminLoginComponent},
+  {path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
   {path: '**', component: PageNotFoundComponent}
 ];
 

@@ -24,6 +24,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FinnkinoComponent } from './finnkino/finnkino.component';
 import {HttpClientModule} from '@angular/common/http';
 import { NewsFilterPipe } from './pipes/news-filter.pipe';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminComponent } from './admin/admin.component';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -36,7 +42,9 @@ import { NewsFilterPipe } from './pipes/news-filter.pipe';
     ReactiveFormComponent,
     PageNotFoundComponent,
     FinnkinoComponent,
-    NewsFilterPipe
+    NewsFilterPipe,
+    AdminLoginComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +62,10 @@ import { NewsFilterPipe } from './pipes/news-filter.pipe';
     MatCheckboxModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatExpansionModule
+    MatExpansionModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
