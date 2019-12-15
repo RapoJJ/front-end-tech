@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FeedbackItem} from '../classes/feedback-item';
+import {FeedbackService} from '../service/feedback.service';
 
 @Component({
   selector: 'app-feedback',
@@ -9,9 +10,8 @@ import {FeedbackItem} from '../classes/feedback-item';
 export class FeedbackComponent implements OnInit {
   feedbackList: Array<FeedbackItem> = [];
 
-  constructor() {
-    this.feedbackList.push(new FeedbackItem('How good was service?', 0),
-      new FeedbackItem('Happy or not?', 0));
+  constructor(private feedbackService: FeedbackService) {
+    this.feedbackList = this.feedbackService.getFeedback();
   }
 
   ngOnInit() {
