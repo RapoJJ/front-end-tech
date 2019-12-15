@@ -10,6 +10,7 @@ import {FinnkinoComponent} from './finnkino/finnkino.component';
 import {AdminLoginComponent} from './admin-login/admin-login.component';
 import {AdminComponent} from './admin/admin.component';
 import {AuthGuard} from './shared/auth.guard';
+import {ForexComponent} from './forex/forex.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'form', component: RegistrationFormComponent},
   {path: 'reactive', component: ReactiveFormComponent},
   {path: 'finnkino', component: FinnkinoComponent},
+  {path: 'forex', component: ForexComponent},
   {path: 'adminLogin', component: AdminLoginComponent},
   {path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
   {path: '**', component: PageNotFoundComponent}
