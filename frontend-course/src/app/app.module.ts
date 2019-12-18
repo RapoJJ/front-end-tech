@@ -9,7 +9,7 @@ import {
   MatCardModule, MatCheckboxModule, MatExpansionModule,
   MatGridListModule,
   MatIconModule, MatInputModule,
-  MatMenuModule,
+  MatMenuModule, MatOptionModule, MatSelectModule,
   MatSliderModule,
   MatToolbarModule
 } from '@angular/material';
@@ -67,7 +67,9 @@ import { ForexComponent } from './forex/forex.component';
     MatExpansionModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    MatOptionModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
