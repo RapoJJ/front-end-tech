@@ -5,3 +5,8 @@
   float: left;
   padding-right: 5px;
 }
+mat-card {
+  width: 80vw;
+  display: block;
+  margin: auto;
+}

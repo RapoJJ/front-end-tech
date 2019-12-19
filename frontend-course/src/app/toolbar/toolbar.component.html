@@ -14,6 +14,11 @@
     <button mat-menu-item (click)="onNavigateClick('finnkino')">Finnkino News</button>
     <button mat-menu-item (click)="onNavigateClick('forex')">Currency Exchange Rates</button>
     <button mat-menu-item (click)="onNavigateClick('adminLogin')">Admin Sign in</button>
-
   </mat-menu>
+  <div class="logout" *ngIf="userEmail$ | async as email">
+    <span>{{email}} </span>
+    <button mat-raised-button (click)="signOut()">Sign out</button>
+  </div>
+
+
 </mat-toolbar>

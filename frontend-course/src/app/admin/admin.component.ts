@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../service/auth.service';
+import {BehaviorSubject, Observable} from 'rxjs';
 
 @Component({
   selector: 'app-admin',
@@ -7,10 +8,12 @@ import {AuthService} from '../service/auth.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
+  username$: Observable<string>;
 
   constructor(private loginService: AuthService) { }
 
   ngOnInit() {
+    this.username$ = this.loginService.checkLoggedInUser();
   }
 
   signOut() {

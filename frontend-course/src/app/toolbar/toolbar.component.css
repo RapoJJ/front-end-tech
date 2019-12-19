@@ -2,3 +2,8 @@ mat-toolbar {
   background-color: darkseagreen;
   margin-bottom: 2vh;
 }
+
+.logout {
+  position: fixed !important;
+  right: 20px;
+}
