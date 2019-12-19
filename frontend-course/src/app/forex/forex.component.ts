@@ -14,10 +14,10 @@ export class ForexComponent implements OnInit {
   targetForex: string;
   currentRate: number;
   inputAmount: number;
-  targetAmount: number;
+  targetAmount: string;
 
   constructor(private forexRatesService: ForexRatesService) {
-    this.targetAmount = 0;
+    this.targetAmount = '';
     this.currentRate = 1;
     this.forexList = ['EUR'];
     this.forexRates = new ForexRates();
@@ -44,7 +44,7 @@ export class ForexComponent implements OnInit {
           }
         });
         console.log('Summa = ' + this.inputAmount * this.currentRate);
-        this.targetAmount = Number((this.inputAmount * this.currentRate + 0.001).toFixed(2));
+        this.targetAmount = (this.inputAmount * this.currentRate).toFixed(2);
       });
     }
   }
