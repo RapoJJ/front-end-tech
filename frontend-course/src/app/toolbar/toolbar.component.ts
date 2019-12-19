@@ -13,7 +13,6 @@ export class ToolbarComponent implements OnInit {
 
   constructor(private router: Router, private loginService: AuthService) {
     this.userEmail$ = this.loginService.checkLoggedInUser();
-    console.log(this.userEmail$);
   }
 
   ngOnInit() {

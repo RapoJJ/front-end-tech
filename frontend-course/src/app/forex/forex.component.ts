@@ -12,37 +12,40 @@ export class ForexComponent implements OnInit {
   forexRates: ForexRates;
   selectedForex: string;
   targetForex: string;
-  amount: number;
+  currentRate: number;
+  inputAmount: number;
+  targetAmount: number;
 
   constructor(private forexRatesService: ForexRatesService) {
-    this.forexList = [];
+    this.targetAmount = 0;
+    this.currentRate = 1;
+    this.forexList = ['EUR'];
     this.forexRates = new ForexRates();
   }
 
   ngOnInit() {
-    this.forexRatesService.getRatesData().subscribe( response => {
-      const objectArray = Object.entries(response.rates);
-      objectArray.forEach(([key]) => {
+    this.forexRatesService.getRatesData().subscribe(response => {
+      const ratesArray = Object.entries(response.rates);
+      ratesArray.forEach(([key]) => {
         this.forexList.push(key);
       });
     });
   }
 
   onChange() {
-    this.forexRatesService.getData(this.selectedForex).subscribe( response => {
-      this.forexRates = response;
-      const objectArray = Object.entries(this.forexRates.rates);
+    if (this.targetForex !== undefined && this.inputAmount !== undefined && this.selectedForex !== undefined) {
+      this.forexRatesService.getData(this.selectedForex).subscribe(response => {
+        this.forexRates = response;
+        const ratesArray = Object.entries(this.forexRates.rates);
 
-      objectArray.forEach(([key, value]) => {
-        console.log(key);
-        console.log(value);
+        ratesArray.forEach(([key, value]) => {
+          if (key === this.targetForex) {
+            this.currentRate = value;
+          }
+        });
+        console.log('Summa = ' + this.inputAmount * this.currentRate);
+        this.targetAmount = Number((this.inputAmount * this.currentRate + 0.001).toFixed(2));
       });
-      if (this.targetForex !== undefined && this.amount !== undefined) {
-        let targetForex;
-        console.log(this.forexRates.rates);
-        console.log('Summa' + this.amount);
-      }
-    });
+    }
   }
-
 }
