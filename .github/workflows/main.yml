@@ -1,7 +1,4 @@
-on: 
-  push:
-    tags:
-      - '*'
+on: push
 
 name: Build Angular
 jobs:
@@ -36,4 +33,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "dist/angular-githubaction/*"
+          tag: v1.0.5
           token: ${{ secrets.TOKEN }}
