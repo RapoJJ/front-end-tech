@@ -37,6 +37,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     needs: build
+    defaults:
+      run:
+        working-directory: ./frontend-course 
     strategy:
       matrix:
         os: [ubuntu-lastest, windows-2016]
@@ -62,6 +65,9 @@ jobs:
   Build-and-Push-Docker-Image:
     runs-on: ubuntu-latest
     needs: test
+    defaults:
+      run:
+        working-directory: ./frontend-course
     name: Docker Build, Tag, Push
     
     steps:
