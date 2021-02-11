@@ -29,9 +29,11 @@ jobs:
         run: |
           npm i
           npm run build
-      - name: Push Build to Releases
-        uses: ncipollo/release-action@v1
+      - name: Build container image
+        uses: docker/build-push-action@v1
         with:
-          artifacts: "dist/angular-githubaction/*"
-          tag: v1.0.5
-          token: ${{ secrets.TOKEN }}
+          username: ${{github.actor}}	          
+          password: ${{secrets.TOKEN}}	          
+          registry: docker.pkg.github.com	          
+          repository: rapojj/front-end-tech/frontend-course
+          tag_with_sha: true
