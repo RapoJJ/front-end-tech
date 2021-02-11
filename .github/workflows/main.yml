@@ -26,7 +26,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: npm install and npm run build
         run: |
-          npm i
+          npm install
           npm run build
       - uses: actions/upload-artifact@master
         with:
