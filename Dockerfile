@@ -1,5 +1,5 @@
 FROM trion/ng-cli as builder
-WORKDIR /app
+WORKDIR /frontend-course
 COPY package.json package.json
 COPY package-lock.json package-lock.json
 RUN npm ci  --debug 
