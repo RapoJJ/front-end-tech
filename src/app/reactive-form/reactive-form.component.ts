@@ -23,7 +23,7 @@ export class ReactiveFormComponent implements OnInit {
         Validators.pattern('^(0[1-9]|[12]\\d|3[01])(0[1-9]|1[0-2])([5-9]\\d+|\\d\\d-|[01]\\dA)\\d{3}[\\dA-Z]$')]],
       username: ['', [Validators.required, Validators.minLength(6)]],
       password: ['', [Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$')]],
-      confirmPassword: ['', [Validators.required,]],
+      confirmPassword: ['', [Validators.required, ]],
       termsAccepted: ['', [Validators.required]],
     });
   }

@@ -18,7 +18,7 @@ export class MovieNewsService {
     return this.httpClient.get(this.newsSource, {responseType: 'text'}).pipe(map(response => {
       let newsData: FinnkinoNews[] = [];
       // tslint:disable-next-line:only-arrow-functions
-      parseString(response, {trim: true, explicitArray: false, mergeAttrs: true}, function(err, result){
+      parseString(response, {trim: true, explicitArray: false, mergeAttrs: true}, function(err, result) {
         newsData = result.News.NewsArticle;
         });
       return newsData;

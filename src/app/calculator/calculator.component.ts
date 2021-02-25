@@ -24,7 +24,7 @@ export class CalculatorComponent implements OnInit {
         // tslint:disable-next-line:no-eval
         this.result = eval(this.operation);
         this.operation = this.result.toString();
-      } catch(error) {
+      } catch (error) {
         console.error(error);
         this.operation = '';
       }
