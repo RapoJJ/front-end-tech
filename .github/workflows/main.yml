@@ -16,7 +16,7 @@ jobs:
         with:
           name: webpack artifacts
           path: dist/frontend-course/
-          
+
   test:
     runs-on: ubuntu-latest
     needs: build
@@ -37,10 +37,10 @@ jobs:
       - name: npm install, and test
         run: |
           npm install
-          npm test
+          npm test-headless
         env:
           CI: true
-          
+
   Build-and-Push-Docker-Image:
     runs-on: ubuntu-latest
     needs: test
@@ -58,5 +58,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "front-end-tech-docker-test"
           heroku_email: "joonas.rapo@gmail.com"
-          remote_branch: master 
+          remote_branch: master
           usedocker: true
