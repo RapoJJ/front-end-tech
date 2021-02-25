@@ -22,7 +22,7 @@ jobs:
     needs: build
     strategy:
       matrix:
-        os: [ubuntu-lastest]
+        os: [ubuntu-latest]
         node-version: [14.x]
     steps:
       - uses: actions/checkout@v1
