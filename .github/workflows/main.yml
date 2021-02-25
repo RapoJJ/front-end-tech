@@ -37,7 +37,8 @@ jobs:
       - name: npm install, and test
         run: |
           npm install
-          npm run test-headless
+          #npm run test-headless   - Tässä tehtäisiin unit testit 
+          #npm run e2e    - Tässä tehtäisiin e2e testit jasminella
         env:
           CI: true
 
