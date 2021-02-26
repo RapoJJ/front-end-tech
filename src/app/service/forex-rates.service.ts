@@ -15,6 +15,7 @@ export class ForexRatesService {
 
   getRatesData(): Observable<any> {
     return this.httpClient.get(this.ratesSource).pipe(map(response => {
+      console.log(response);
       return response as ForexRates;
     }));
   }
