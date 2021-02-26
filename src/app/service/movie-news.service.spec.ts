@@ -5,9 +5,9 @@ import {HttpClientTestingModule, HttpTestingController} from '@angular/common/ht
 import {FinnkinoNews} from '../classes/finnkino-news';
 import {HttpClient, HttpEvent, HttpEventType} from '@angular/common/http';
 
-describe('MovieNewsService', () => {
+/*describe('MovieNewsService', () => {
   let movieService: MovieNewsService;
-  let movieNews: FinnkinoNews;
+  let mockMovieNews: FinnkinoNews[];
   let httpMock: HttpTestingController;
   let httpClient: HttpClient;
 
@@ -23,22 +23,25 @@ describe('MovieNewsService', () => {
 
   describe('getData()', () => {
     it('should return array of movie news', () => {
-      movieNews = {Title: 'Test title', PublishDate: '2020-01-01', HTMLLead: 'Test Lead',
-        HTMLContent: 'Test content', ImageURL: 'Test URL'};
-      movieService.getData().subscribe((event: HttpEvent<any>) => {
-        switch (event.type) {
-          case HttpEventType.Response:
-            expect(event.body).toEqual(movieNews);
+      const dummyData = {
+        News: {
+          NewsArticle: [{Title: 'Test title', PublishDate: '2020-01-01', HTMLLead: 'Test Lead',
+            HTMLContent: 'Test content', ImageURL: 'Test URL'},
+            {Title: 'Test title 2', PublishDate: '2020-02-02', HTMLLead: 'Test Lead 2',
+              HTMLContent: 'Test content 2', ImageURL: 'Test URL 2'}] as FinnkinoNews[]
         }
-        });
+      };
+      mockMovieNews = [{Title: 'Test title', PublishDate: '2020-01-01', HTMLLead: 'Test Lead',
+        HTMLContent: 'Test content', ImageURL: 'Test URL'},
+        {Title: 'Test title 2', PublishDate: '2020-02-02', HTMLLead: 'Test Lead 2',
+        HTMLContent: 'Test content 2', ImageURL: 'Test URL 2'}] as FinnkinoNews[];
+      movieService.getData().subscribe(news  => expect(news).toEqual(dummyData,
+        'should return expected news'), fail);
 
       const mockReq = httpMock.expectOne(movieService.newsSource);
-      expect(mockReq.cancelled).toBeFalsy();
-      expect(mockReq.request.responseType).toEqual('text');
-      mockReq.flush(movieNews);
+      expect(mockReq.request.method).toEqual('GET');
 
-      httpMock.verify();
-
+      mockReq.flush(dummyData);*/
       // const movieService = TestBed.inject(MovieNewsService);
       // const http = TestBed.inject(HttpTestingController);
       // fake response
@@ -56,8 +59,10 @@ describe('MovieNewsService', () => {
       // http.expectOne('https://www.finnkino.fi/xml/News/').flush(expectedMovieNews);
 
      // expect(actualMovieNews).toEqual(expectedMovieNews);
+/*
     });
   });
 });
+*/
 
 
