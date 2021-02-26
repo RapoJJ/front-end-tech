@@ -42,7 +42,7 @@ jobs:
         env:
           CI: true
 
-  Build-and-Push-Docker-Image:
+  Download-Build-and-Deploy:
     runs-on: ubuntu-latest
     needs: test
     name: Deploy app in heroku
